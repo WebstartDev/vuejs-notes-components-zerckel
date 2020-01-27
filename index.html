@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Note</title>
+    <link href="css.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="app">
+    <button v-on:click="create" type="button"> CREATE NEW NOTE</button>
+    <div id="list">
+        <div class="card" v-for="card in cards">
+            <div class="note">
+                <span> {{card.text}} </span>
+            </div>
+            <div class="delete">
+                DELETE NOTE
+            </div>
+            <textarea class="modify" v-model="card.text"></textarea>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js.js" rel="script"></script>
+</html>

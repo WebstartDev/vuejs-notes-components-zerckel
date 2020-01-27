@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+}
+#app{
+    width: 100vw;
+    height: 100vh;
+}
+
+.note{
+    width: 60%;
+    padding: 10px;
+    display: inline-block;
+}
+.delete{
+    width: 20%;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    background-color: red;
+    color: white;
+}
+.modify{
+    width: 60%;
+    padding: 10px;
+}
