@@ -9,15 +9,7 @@
 <div id="app">
     <button v-on:click="create" type="button"> CREATE NEW NOTE</button>
     <div id="list">
-        <div class="card" v-for="card in cards">
-            <div class="note">
-                <span> {{card.text}} </span>
-            </div>
-            <div class="delete">
-                DELETE NOTE
-            </div>
-            <textarea class="modify" v-model="card.text"></textarea>
-        </div>
+        <card @delete-note="deleteNote" @update-note="update" v-bind:card="card" v-if="card.text !== false"  class="card" v-for="card in cards"></card>
     </div>
 </div>
 </body>
