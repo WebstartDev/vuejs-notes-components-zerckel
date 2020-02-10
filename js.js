@@ -6,9 +6,9 @@ Vue.component('card', {
                 <span> {{card.text}} </span>
                 <span> {{card.text.length}}</span>
             </div>
-            <div v-on:click="deleteNote(card.id)" class="delete">
+            <divgit  v-on:click="deleteNote(card.id)" class="delete">
                 DELETE NOTE
-            </div>
+            </divgit>
             <textarea v-if="card.modify"  class="modify" v-model="card.text"></textarea>
             </span>  
 `,
