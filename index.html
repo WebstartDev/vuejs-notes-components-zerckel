@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Note</title>
+    <link href="css.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="app">
+    <button v-on:click="create" type="button"> CREATE NEW NOTE</button>
+    <div id="list">
+        <card @delete-note="deleteNote" @update-note="update" v-bind:card="card" v-if="card.text !== false"  class="card" v-for="card in cards"></card>
+    </div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js.js" rel="script"></script>
+</html>
